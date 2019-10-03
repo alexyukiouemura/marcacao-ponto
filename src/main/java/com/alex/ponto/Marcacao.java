@@ -51,7 +51,7 @@ public class Marcacao {
 			driver.close();
 
 			BufferedWriter writer = new BufferedWriter(new FileWriter("./log-marcacao-ponto.txt", true));
-			SimpleDateFormat dt = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
+			SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 			writer.append(dt.format(new Date()) + " - Ponto Marcado");
 			writer.newLine();
 
@@ -59,7 +59,7 @@ public class Marcacao {
 		} catch (Exception e) {
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter("./log-marcacao-ponto.txt", true));
-				SimpleDateFormat dt = new SimpleDateFormat("dd-mm-yyyyy hh:mm:ss");
+				SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 				writer.append(dt.format(new Date()));
 				writer.append(" - " + e.getMessage());
 				writer.newLine();
@@ -71,6 +71,3 @@ public class Marcacao {
 		}
 
 	}
-
-}
-
